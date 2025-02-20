@@ -14,6 +14,5 @@ COPY pyproject.toml /app/pyproject.toml
 
 RUN pip install poetry
 RUN poetry config virtualenvs.create false
-RUN poetry install --without dev --no-root
-
+RUN poetry install
 CMD ["poetry", "run", "python", "test.py"]
